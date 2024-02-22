@@ -145,21 +145,21 @@ publishing {
     }
 }
 
-//curseforge {
-//    apiKey = secrets.getProperty("apiKey")
-//    project {
-//        id = ''
-//        releaseType = 'release'
-//        changelogType = 'markdown'
-//        changelog = file("changelog.md")
-//        addGameVersion 'Forge'
-//        addGameVersion 'Java 17'
-//        addGameVersion "$minecraft_version"
-//        mainArtifact(jar) {
-//            displayName = "$mod_name $version"
-//        }
-//    }
-//}
+curseforge {
+    apiKey = secrets.getProperty("apiKey")
+    project {
+        id = '977864'
+        releaseType = 'release'
+        changelogType = 'markdown'
+        changelog = file("changelog.md")
+        addGameVersion 'Forge'
+        addGameVersion 'Java 17'
+        addGameVersion "$minecraft_version"
+        mainArtifact(jar) {
+            displayName = "$mod_name $version"
+        }
+    }
+}
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
