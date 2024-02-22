@@ -18,6 +18,7 @@ public abstract class LocalPlayerMixin {
     @Shadow public abstract boolean isCrouching();
     private static float baseStepHeight = -1.0f;
 
+    @SuppressWarnings("deprecation")
     @Inject(method = "move", at = @At(value = "HEAD"))
     private void enableSmoothStep(MoverType pMoverType, Vec3 pPos, CallbackInfo pCallbackInfo) {
         Entity player = ((Entity) (Object) this);
@@ -26,9 +27,9 @@ public abstract class LocalPlayerMixin {
             if (baseStepHeight < 0) {
                 baseStepHeight = player.getStepHeight();
             }
-            player.setMaxUpStep(Config.maxStepHeight.get().floatValue());
+            player.maxUpStep = Config.maxStepHeight.get().floatValue();
         } else if (baseStepHeight >= 0) {
-            player.setMaxUpStep(baseStepHeight);
+            player.maxUpStep = baseStepHeight;
         }
     }
 
