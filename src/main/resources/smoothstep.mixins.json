@@ -2,6 +2,7 @@
   "required": true,
   "package": "com.smashingmods.smoothstep.mixin",
   "compatibilityLevel": "JAVA_17",
+  "refmap": "smoothstep.mixins.refmap.json",
   "minVersion": "0.8",
   "client": [
     "LocalPlayerMixin"
