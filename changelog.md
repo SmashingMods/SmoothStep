@@ -1,3 +1,4 @@
-# SmoothStep 1.20.1-1.0.0
+# SmoothStep 1.19.2-1.0.1
 
-This is the initial release of Smooth Step. The mod allows you to smoothly step up blocks without auto-jump. There are some config options such as requiring an enchantment on boots.
+Changes:
+- Bugfix: Forgot to add refmap to smoothstep.mixins.json.
